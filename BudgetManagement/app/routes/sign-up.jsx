@@ -6,7 +6,7 @@ export const meta = () => {
 export default function SignUp() {
   return (
     <div>
-    
+    SIGN UP
 
     </div>
 
