@@ -1,39 +1,20 @@
+import MoneyCard from "../components/MoneyCard";
+import Navbar from "../components/Navbar";
 export const meta = () => {
-  return [{ title: "New Remix App" }];
+  return [{ title: "Budget Management" }];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div>
+      <Navbar />
+      <div className="flex gap-3 mt-3">
+        <MoneyCard amount="500,000" text="Total money" /> 
+        <MoneyCard amount="200,000" text="Spent Money"/>
+        <MoneyCard amount="300,000" text="Remaining Money" />
+      </div>
+
     </div>
+
   );
 }
